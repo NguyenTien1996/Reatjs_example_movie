@@ -31,6 +31,19 @@ export default function DetailMovie({movie}) {
                 
                 </Row>
             </Col>
+            <Col span={6}>
+                <Row>
+                {movie.images.backdrops.map((item, index) => (
+                    <Col span={24} key={index}  style={{padding:'10px'}}>
+                    <Image
+                        src={`https://image.tmdb.org/t/p/w300${item.file_path}`}
+                        alt={item.vote_count}
+                    />
+                    </Col>
+                ))}
+                
+                </Row>
+            </Col>
             </Row>
     </>
   )
